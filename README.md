@@ -42,7 +42,10 @@ To design and implement a structured database system that supports:
 
 ---
 
-**Data Retrieval Queries**
+-- =========================================
+-- 🔎 Data Retrieval Queries
+-- =========================================
+
 -- Books priced above 50
 SELECT title, price_incl_tax
 FROM books
@@ -60,7 +63,10 @@ FROM books
 WHERE stars >= 4 AND availability <= 10;
 
 
-**Data Aggregation & Analysis**
+-- =========================================
+-- 📊 Data Aggregation & Analysis
+-- =========================================
+
 -- Total books & average price per category
 SELECT category,
        COUNT(*) AS total_books,
@@ -80,7 +86,10 @@ SELECT category,
 FROM books
 GROUP BY category;
 
-**Complex Queries & Reporting**
+
+-- =========================================
+-- 🧠 Complex Queries & Reporting
+-- =========================================
 
 -- Classify books by price range
 SELECT title, price_incl_tax,
@@ -107,7 +116,10 @@ SELECT category,
 FROM books
 GROUP BY category;
 
-**Data Maintenance & Updates**
+
+-- =========================================
+-- 🛠️ Data Maintenance & Updates
+-- =========================================
 
 -- Find a book’s ID
 SELECT id, title
@@ -133,7 +145,10 @@ WHERE id IN (
     ) AS temp
 );
 
-**Schema Improvements (Normalization)**
+
+-- =========================================
+-- 🧩 Schema Improvements (Normalization)
+-- =========================================
 
 -- Create Publisher Table
 CREATE TABLE publishers (
@@ -159,7 +174,10 @@ FOREIGN KEY (publisher_id) REFERENCES publishers(publisher_id),
 ADD CONSTRAINT fk_category
 FOREIGN KEY (category_id) REFERENCES categories(category_id);
 
-**Reporting Views (Dashboard Ready)**
+
+-- =========================================
+-- 📈 Reporting Views (Dashboard Ready)
+-- =========================================
 
 -- Top Rated Books View
 CREATE OR REPLACE VIEW top_rated_books AS
